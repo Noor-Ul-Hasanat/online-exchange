@@ -1,4 +1,4 @@
-import {Dummyrouting} from './components/Dummyrouting';
+import {Dummyrouting} from './component/Dummyrouting';
 import './App.css';
 
 function App() {
