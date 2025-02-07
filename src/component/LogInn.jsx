@@ -61,7 +61,8 @@ const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
       <div className="mb-4 text-left mt-8">
         <label >Password</label>
         <input
-          type="text"
+          type="password"
+          
           placeholder="Password"
           ref={Passwordref}
           className={isvalidpassword? 'w-full mt-1 px-4 py-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border border-gray-300'
