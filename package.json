@@ -52,6 +52,5 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17"
-  },
-  "homepage": "https://Noor-Ul-Hasanat.github.io/online-exchange/"
+  }
 }

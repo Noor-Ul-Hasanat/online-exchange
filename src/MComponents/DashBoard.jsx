@@ -52,14 +52,14 @@ export  const  DashBoard=()=> {
 
       {/* Cards Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 w-full">
-        {["Bitcoin", "Etherum", "BNB", "Solana"].map((coin, index) => (
+        {["Bitcoin", "Etherum", "BNB", "Solana"].map((coin,index) => (
           <div
-            key={index}
+            key={coin}
             className={`p-4 rounded-lg shadow-md ${
               index % 4 === 0
                 ? "bg-green-500 "
                 : index % 4 === 1
-                ? "bg-blue-500 "
+                ? "bg-blue-500 "        // dynamically changing the color of the card help of ternary operator  
                 : index % 4 === 2
                 ? "bg-purple-500 "
                 : "bg-orange-500"
