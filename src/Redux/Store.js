@@ -10,8 +10,7 @@ export const fetchBalance = createAsyncThunk('dashboard/fetchBalance', async () 
 });
 // Fetching cards from Api
 export  const fetchCardsData =createAsyncThunk('dashboard/fetchCardsData',async ()=>{
-    const response = await fetch('https/f/as/ffff');
-  
+    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd&include_24hr_change=true'); 
     const data = await response.json();
     return data.cards;
 });
