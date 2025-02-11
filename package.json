@@ -25,7 +25,7 @@
   
   "scripts": {
     "start": "react-scripts start",
-     "build": "react-scripts build",
+    "build": "PUBLIC_URL=. react-scripts build",
     "deploy": "npm run build && git checkout feature/gh-pages && git merge dev && git push origin feature/gh-pages && git checkout dev",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
