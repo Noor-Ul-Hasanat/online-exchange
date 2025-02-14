@@ -11,7 +11,7 @@ import ProtectedRoute from './ProtectedRoute';
 const router = createHashRouter([
   {
     path: '/',
-    element: <Welcome />,
+    element: <LogInn/>,
   },
   {
     path: '/welcome',
