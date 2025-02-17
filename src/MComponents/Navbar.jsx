@@ -270,7 +270,7 @@ export const Navbar = () => {
             </div>
 
             {/*   Community    */}
-            <div className='xs:w-1/4 w-full'>
+            <div className='xs:w-1/4 w-full pb-4'>
               <h1 className='pl-4 pt-5 text-lg font-medium'>Community</h1>
               <div className='xs:grid xs:grid-cols-4 xs:gap-2 grid-cols-3 grid  pl-4  pt-7 gap-3 '>
                 {/* Youtube */}

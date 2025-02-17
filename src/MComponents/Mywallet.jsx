@@ -21,7 +21,7 @@ export const  Mywallet=()=> {
                                   <p className="text-gray-500 text-sm">Today's PnL    +$0.00(0.00%)</p>
                                   </div> 
                     {/* Buttons  */}
-                     <div className="flex mt-4 w-full xs:w-2/3  gap-3 flex-1  justify-center items-center flex-col xxxs:flex-row bg-red-300">
+                     <div className="flex mt-4 w-full xs:w-2/3  gap-3 flex-1  justify-center items-center flex-col xxxs:flex-row ">
                                        <NavLink to='deposit'>  <button className="px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
                                            Deposit
                                          </button></NavLink>
