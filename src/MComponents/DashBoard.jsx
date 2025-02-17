@@ -16,10 +16,10 @@ export  const  DashBoard=()=> {
 //   },[dispatch]);
   return (
     <> 
-   <div>
+   <div className=''>
       {/* Header */}
-      <div className="flex justify-between items-center mb-6 pb-6 pt-1 ">
-        <h1 className="text-3xl  text-gray-700 font-semibold">Dashboard</h1>
+      <div className="flex justify-between items-center mb-6 pb-6 pt-1 w-full ">
+        <h1 className="text-xl md:text-3xl  text-gray-700 font-semibold">Dashboard</h1>
         <div >
         <h1 className="">Identitty verification</h1>
         <button>Unverified</button>
@@ -28,22 +28,22 @@ export  const  DashBoard=()=> {
       </div>
        {/* Balance Section */}
                    <div className="bg-white p-6 rounded-lg shadow-md mb-6 flex flex-col xs:flex-row ">
-                     <div className='flex-1 w-full xs:w-1/3 justify-center'>
+                     <div className='flex-1 w-full xs:w-1/3 justify-center '>
                      <h2 className="text-gray-500 text-lg font-semibold">Estimated Balance</h2>
                      <h1 className="text-lg  text-gray-800 mb-2">0.00 BTC</h1>
                      <p className="text-gray-500 text-sm">= 0.00$</p>
                      <p className="text-gray-500 text-sm">Today's PnL    +$0.00(0.00%)</p>
                      </div> 
        {/* Buttons  */}
-                     <div className="flex mt-4 w-full xs:w-2/3  gap-4 flex-1  justify-center ">
-                     <NavLink to='deposit'>  <button className="px-6 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
+                     <div className="flex mt-4 w-full xs:w-2/3  gap-3 flex-1  justify-center items-center flex-col xxxs:flex-row ">
+                     <NavLink to='deposit'>  <button className="px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
                          Deposit
                        </button></NavLink>
-                       <NavLink to='withdraw'><button className="px-6 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
+                       <NavLink to='withdraw'><button className="px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
                          Withdraw
                        </button></NavLink>
                        <NavLink to='transfer' >
-                       <button className="px-6 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
+                       <button className="px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
                          Transfer
                        </button>
                        </NavLink>

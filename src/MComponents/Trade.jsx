@@ -93,6 +93,8 @@ const [state, setState] =useState({
   return (
     <>
       <div>
+
+
         {/* Header Section */}
         <div className="p-6 md:flex gap-4 w-full">
           <div>
@@ -104,7 +106,7 @@ const [state, setState] =useState({
           <div>
             <p className="text-3xl font-semibold text-green-500">57,971.01</p>
           </div>
-          <div className="text-sm text-gray-600 flex gap-4">
+          <div className="text-sm text-gray-600 md:flex gap-4 grid grid-cols-2">
             <div>
               <p>24h Change</p>
               <p className="text-black">+2.21%</p>
@@ -127,7 +129,7 @@ const [state, setState] =useState({
         <div className="md:flex gap-5 w-full">
           {/* Graph Section */}
           <div className="bg-white mt-6 p-6 rounded-lg shadow-md  w-full md:w-2/3">
-            <div className="h-96">
+            <div className="h-96 w-full">
               <ReactApexChart
                 options={state.options}
                 series={state.series}
@@ -138,18 +140,16 @@ const [state, setState] =useState({
           </div>
 
           {/* Buy/Sell Section */}
-          <div className="gap-6 mt-6 w-full md:w-1/3">
+          <div className=" mt-6 w-full md:w-1/3">
             <div className="bg-white p-6 rounded-lg shadow-md w-full">
               <div className="flex justify-center mb-4">
               <ButtonGroup
       disableElevation
       variant="contained"
-      aria-label="Disabled button group"
-     
-    >
+      aria-label="Disabled button group">
       <Button  style={ {  borderTopLeftRadius: '30px',borderBottomLeftRadius : '30px', color:'#fff'}}>Buy</Button>
       <Button  style={ {  borderBottomRightRadius : '30px',borderTopRightRadius : '30px', color:'#fff'}}>Sell</Button>
-    </ButtonGroup>     
+      </ButtonGroup>     
               </div>
               <form className="w-full">
                 <div className="mb-4 w-full">
@@ -168,9 +168,10 @@ const [state, setState] =useState({
                     placeholder="BTC"
                   />
                 </div>
+
                 <div className="mb-4 w-full ">
-                  <label className="block text-sm text-gray-600 mb-1">Percentage</label>
-                  <div className="flex md:gap-x-0.5 gap-x-3 ">
+                  <p className="block text-sm text-gray-600 mb-1">Percentage</p>
+                  <div className="md:flex grid grid-cols-2 md:gap-x-0.5 gap-x-3 gap-y-2 md:justify-between">
                     <button className="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg">
                       25%
                     </button>
@@ -185,8 +186,10 @@ const [state, setState] =useState({
                     </button>
                   </div>
                 </div>
+
+
                 <div className="mb-4">
-                  <label className="block text-sm text-gray-600 mb-1">Total</label>
+                  <label className="block text-sm text-gray-600 mb-1 w-full">Total</label>
                   <input
                     type="text"
                     className="w-full p-2 border border-gray-300 rounded-lg"
@@ -212,10 +215,14 @@ const [state, setState] =useState({
               </form>
             </div>
           </div>
+
+
+
+
         </div>
 
         {/* Cryptocurrency List */}
-        <div className="bg-white mt-6 p-6 rounded-lg shadow-md">
+        <div className="bg-white mt-6 p-6 rounded-lg shadow-md w-full">
           <div className="md:flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold text-gray-800">
               Top Cryptocurrencies Available on Eternal
@@ -292,7 +299,6 @@ const [state, setState] =useState({
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

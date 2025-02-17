@@ -6,7 +6,7 @@ export const SpotWallet = () => {
     <div>
       {/* Header */}
       <div className="flex justify-between items-center mb-6 pb-6 pt-1 ">
-        <h1 className="text-3xl  text-gray-700 font-semibold">Spot Wallet</h1>
+        <h1 className="text-xl md:text-3xl  text-gray-700 font-semibold">Spot Wallet</h1>
 
       </div>
       {/* Balance Section */}
@@ -18,7 +18,7 @@ export const SpotWallet = () => {
           <p className="text-gray-500 text-sm">Today's PnL    +$0.00(0.00%)</p>
         </div>
         {/* Buttons  */}
-        <div className="flex mt-4 w-full xs:w-2/3  gap-4 flex-1  justify-center ">
+        <div className="flex mt-4 w-full xs:w-2/3  gap-3 flex-1  justify-center items-center flex-col xxxs:flex-row ">
           <NavLink to='trade'>  <button className="px-6 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-800">
             Trade
           </button></NavLink>

@@ -12,7 +12,8 @@ export default {
       },
       screens:{
         'xs' : '900px',
-        'xxs' : '420px'
+        'xxs' : '420px',
+        'xxxs': '390px'
       }
     },
   },

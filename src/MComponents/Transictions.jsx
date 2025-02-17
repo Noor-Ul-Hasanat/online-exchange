@@ -6,15 +6,16 @@ export const Transictions = () => {
     <>
       <div>
         <div className="flex justify-between items-center mb-6 pb-6 pt-1 ">
-          <h1 className="text-3xl  text-gray-700 font-semibold">Transaction History</h1>
+          <h1 className="text-xl md:text-3xl  text-gray-700 font-semibold">Transaction History</h1>
           {/* <button className="text-blue-500 font-medium">Profile</button> */}
         </div>
         <div className='pl-5 bg-white rounded-xl pt-5  grid grid-cols-1 -cols-5 gap-4 w-full overflow-auto'>
 
           {/* Filter Section */}
-          <div className="flex items-center gap-4 bg-white p-6 rounded-lg pt-8 pb-8 w-full">
+          
+          <div className="grid grid-cols-2 items-center  gap-4 bg-white p-6 rounded-lg pt-8 pb-8 w-full overflow-x-auto">
             {/* <!-- Type Filter --> */}
-            <div>
+            <div className='bg-white pl-4 flex-1'>
               <label className="block text-sm text-gray-500 mb-1 flex-1">Type</label>
               <select className="w-full border border-gray-300 rounded-lg p-1 px-3 text-sm">
                 <option>Deposit</option>
@@ -49,7 +50,7 @@ export const Transictions = () => {
             </div>
             <div className="flex items-center bg-white pl-4 flex-1">
               <label className="sr-only">Transaction ID</label>
-              <div className="relative ml-5 mt-5 pl-6  border border-gray-300 rounded-lg bg-gray-100">
+              <div className="relative  mt-5 pl-6  border border-gray-300 rounded-lg bg-gray-100">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-1 px-3 text-gray-400">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none">
                     <g id="SVGRepo_bgCarrier" />
@@ -68,7 +69,7 @@ export const Transictions = () => {
 
           {/* Transaction Table */}
           <div className='overflow-x-auto'>
-        <table className="w-full text-left min-w-[800px]"> 
+        <table className="w-full text-left "> 
     <thead>
               <tr>
                 <td className="p-4  flex items-center gap-2">

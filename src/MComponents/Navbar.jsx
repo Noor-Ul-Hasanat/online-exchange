@@ -62,7 +62,7 @@ export const Navbar = () => {
   return (
     <>
       {/* FullScreen */}
-      <div className=' flex min-w-full'>
+      <div className=' flex w-full'>
         {/* left  */}
         <div className={isShow ?
           'fixed  w-64 h-full bg-white border-r shadow-md z-[99] transform duration-500' :
@@ -147,10 +147,11 @@ export const Navbar = () => {
           </ul>
         </div>
         {/* Right Main div */}
-        <div className='flex-1 md:ml-64 ml-0 min-h-screen flex flex-col'>
+        <div className=' md:ml-64 ml-0 min-h-screen flex flex-col w-full '>
           {/* upper header */}
+          
           <div className="flex items-center justify-between px-2 sm:px-4 py-4 bg-white shadow-md fixed z-50 w-full md:w-[calc(100%-16rem)]" >
-            <div className='block md:hidden' >
+            <div className='block md:hidden w-[10%]' >
               <button onClick={toggleNavbar} className='p-1' >
                 <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24" fill="none">
                   <g id="SVGRepo_bgCarrier" />
@@ -160,7 +161,7 @@ export const Navbar = () => {
               </button>
             </div>
             {/* <!-- Search Bar --> */}
-            <div className="flex items-center w-[40%] sm:w-1/2 md:w-2/4 bg-gray-100 rounded-full px-2 py-2 sm:px-3 sm:py-3 ml-2 sm:ml-5 text-sm font-semibold">
+            <div className="flex items-center w-[40%] bg-gray-200 rounded-full px-2 py-2 sm:px-3 sm:py-3  sm:ml-5 text-sm font-semibold">
               <input ref={Myref}
                 type="text"
                 placeholder="Search..."
@@ -173,7 +174,7 @@ export const Navbar = () => {
               </button>
             </div>
             {/* <!-- Actions --> */}
-            <div className="flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4 w-[40%] justify-end ">
               {/* <!-- Add Funds Button --> */}
               <NavLink to='/deposit'>
                 <button className="hidden lg:flex items-center px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
@@ -219,22 +220,23 @@ export const Navbar = () => {
           </div>
 
           {/* Chnaging div */}
-          <div className='  bg-gray-50 mt-20 sm:p-8 p-4'>
+         
+          <div className=' mt-20 sm:p-8 p-2 bg-gray-50 w-full'>
             <Outlet />
           </div>
 
           {/* Footer Section  */}
-          <div className="xs:flex text-sm text-gray-600 bg-gray-100 px-4 sm:px-12 ">
+         
+          <div className="xs:flex text-sm text-gray-600  px-4 sm:px-12 bg-gray-100 ">
 
             <div className='xs:w-3/4 grid grid-cols-1 -cols-5 gap-4 overflow-auto w-full'>
-              <table className="w-full ">
+              <table className="w-full  ">
                 <thead>
                   <tr>
                     <td className="p-5 text-sm font-medium">Corporate</td>
                     <td className="p-5 text-sm font-medium">Learn</td>
                     <td className="p-5 text-sm font-medium">Crypto Prices</td>
-                    <td className="p-5 text-sm font-medium">Crypto Prices</td>
-                    <td className="p-5 text-sm font-medium">Crypto Prices</td>
+                   
                   </tr>
                 </thead>
                 <tbody>
@@ -268,9 +270,9 @@ export const Navbar = () => {
             </div>
 
             {/*   Community    */}
-            <div className='w-1/4 '>
+            <div className='xs:w-1/4 w-full'>
               <h1 className='pl-4 pt-5 text-lg font-medium'>Community</h1>
-              <div className='xs:grid xs:grid-cols-4 xs:gap-2 grid pl-4  pt-7 gap-3 '>
+              <div className='xs:grid xs:grid-cols-4 xs:gap-2 grid-cols-3 grid  pl-4  pt-7 gap-3 '>
                 {/* Youtube */}
                 <div>
                   <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
