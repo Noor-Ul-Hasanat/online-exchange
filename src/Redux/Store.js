@@ -10,27 +10,29 @@ export const fetchBalance = createAsyncThunk('dashboard/fetchBalance', async () 
 });
 // Fetching cards from Api
 export  const fetchCardsData =createAsyncThunk('dashboard/fetchCardsData',async ()=>{
-    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd&include_24hr_change=true'); 
+    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd'); 
     const data = await response.json();
-    return data.cards;
+    return data;
 });
 //Fetching Announcements from Api
 export const fetchAnnouncements =createAsyncThunk('dashboard/fetchAnnouncements', async()=>{
-    const response = await fetch('https/www.card.com');
+    const response = await fetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN');
     const data = await response.json();
     return data.Announcements;
 });
 // Fetching Latest News From APi
 export const fetchlatestNews =createAsyncThunk('dashboard/fetchlatestNews', async()=>{
-    const response = await fetch('https/www.latestnes.com');
+    const response = await fetch("https://financialmodelingprep.com/api/v4/crypto_news?"
+    );
     const data = await response.json();
-    return data.latestNews;
+    return data;
 });
 // Fetching Table From Api
 export const fetchTableData =createAsyncThunk('dashboard/fetchTableData', async()=>{
-    const response = await fetch ('https/www/latest.com');
+    const response = await fetch ('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h');
     const data = await response.json();
-    return data.tableData
+    return data
+
 })
 // Initial state
 const initialState = {
@@ -60,17 +62,29 @@ const dashboardSlice = createSlice({
                 state.status = 'failed';
                 state.error = action.error.message;
             })
+            .addCase(fetchCardsData.pending, (state) => {
+                state.status = 'loading...'; // ✅ Added pending case
+            })
             .addCase(fetchCardsData.fulfilled, (state,action)=>{
              state.status ='succeeded';
              state.cards = action.payload;
+            })
+            .addCase(fetchTableData.pending, (state) => {
+                state.status = 'loading...'; // ✅ Added pending case
             })
             .addCase(fetchTableData.fulfilled,(state,action)=>{
                 state.status ='succeeded';
                 state.tableData = action.payload;
             })
+            .addCase(fetchAnnouncements.pending, (state) => {
+                state.status = 'loading...'; // ✅ Added pending case
+            })           
             .addCase(fetchAnnouncements.fulfilled,(state,action)=>{
                 state.status ='succeeded';
                 state.Announcements =action.payload;
+            })
+            .addCase(fetchlatestNews.pending, (state) => {
+                state.status = 'loading...'; // ✅ Added pending case
             })
             .addCase(fetchlatestNews.fulfilled,(state,action)=>{
                 state.status = 'succeeded';
@@ -83,8 +97,7 @@ const dashboardSlice = createSlice({
 // Login logout functionality
 const initialState1 = {
     isAuthenticated: false,
-    // token: null,
-    // user: null,
+   
 };
 // slice for Auth functionality
 const authSlice = createSlice ({
@@ -98,8 +111,7 @@ const authSlice = createSlice ({
         },
         logout(state){
             state.isAuthenticated=false;
-            // state.token= null;
-            // state.user= null;
+           
         }       
     }
 })

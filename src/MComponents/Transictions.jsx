@@ -201,7 +201,6 @@ export const Transictions = () => {
                 3
               </button>
             </NavLink>
-
           </div>
           <NavLink to='' >
             <button className="px-4 py-2 text-blue-600 rounded-3xl border-blue-600 border hover:bg-blue-500 ">
