@@ -22,7 +22,7 @@ useEffect(() => {
 }, [dispatch]);
 
 const balance = useSelector((state) => state.dashboard.balance);
-const prices = useSelector((state) => state.dashboard.cards);
+const prices = useSelector((state) => state.dashboard.cards || []);
 //const announcements = useSelector((state) => state.dashboard.announcements);
 const latestNews = useSelector((state) => state.dashboard.latestNews || []);
 const topCryptos = useSelector((state) => state.dashboard.tableData || []);
