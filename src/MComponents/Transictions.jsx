@@ -98,7 +98,7 @@ export const Transictions = () => {
                 </td>
                 <td className="p-4 ">2/5/2020 06:24 AM</td>
                 <td className="p-4 ">William</td>
-                <td> <div className="flex items-center"> <img src={'https://i.pinimg.com/originals/28/3a/b1/283ab1108ef8e379a2e555de019e1aee.jpg'} alt="profile" className="w-8 h-8 mr-3 rounded-full object-cover bg-gray-600" />  <span className="">Harry</span> </div></td>
+                <td className="p-4">Louis</td>
                 <td> Bitcoin</td>
                 <td className="p-4  text-green-500">
                   +$5,553
@@ -121,8 +121,8 @@ export const Transictions = () => {
                 </td>
                 <td className="p-4 ">2/5/2020 06:24 AM</td>
                 <td className="p-4 ">William</td>
-                <td><div className="flex items-center"> <img src={'https://i.pinimg.com/originals/28/3a/b1/283ab1108ef8e379a2e555de019e1aee.jpg'} alt="profile" className="w-8 h-8 mr-3 rounded-full object-cover bg-gray-600" />  <span className="">Louis</span> </div></td>
-                <td>  Litecoin </td>
+                <td className="p-4">Louis</td>
+                <td className="p-4">  Litecoin </td>
                 <td className="p-4  text-green-500">+$987</td>
                 <td className="p-4  text-green-600">
                   COMPLETED
@@ -142,7 +142,7 @@ export const Transictions = () => {
                 </td>
                 <td className="p-4 ">2/5/2020 06:24 AM</td>
                 <td className="p-4 ">William</td>
-                <td><div className="flex items-center"> <img src={'https://i.pinimg.com/originals/28/3a/b1/283ab1108ef8e379a2e555de019e1aee.jpg'} alt="profile" className="w-8 h-8 mr-3 rounded-full object-cover bg-gray-600" />  <span className="">Cindy</span> </div></td>
+                <td className="p-4">Louis</td>
                 <td> Monero</td>
                 <td className="p-4  text-red-500">-$455</td>
                 <td className="p-4  text-red-600">CANCELED</td>
