@@ -52,7 +52,7 @@ const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
         <label >Email/Phone Number</label>
         <input
           type="text"
-          placeholder="Email/Phone"
+          placeholder="noorulhasanat1234@gmail.com"
           ref={emailref}
           className={isvalidemail? 'w-full mt-1 px-4 py-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border border-gray-300'
              : 'border border-red-500 bg-red-200  w-full mt-1 px-4 py-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-200'}
@@ -62,7 +62,7 @@ const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
         <label >Password</label>
         <input
           type="text"
-          placeholder="Password"
+          placeholder="Admin1"
           ref={Passwordref}
           className={isvalidpassword? 'w-full mt-1 px-4 py-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border border-gray-300'
             : 'border border-red-500 bg-red-200  w-full mt-1 px-4 py-2 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-200'}

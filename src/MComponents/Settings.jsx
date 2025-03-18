@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../assets/WhatsApp Image 2024-02-28 at 23.32.02_8a2cc56f.jpg'
+
 export const  Settings=()=> {
   return (
     <>
