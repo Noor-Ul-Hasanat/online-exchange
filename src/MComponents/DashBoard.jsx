@@ -102,20 +102,19 @@ const topCryptos = useSelector((state) => state.dashboard.tableData || []);
       <p className="text-white text-base">{coin}</p>
 
       <p className="text-xl text-white">
-        $
-        {prices
-          ? coin === "Bitcoin"
-            ? prices.bitcoin.usd.toLocaleString()
-            : coin === "Ethereum"
-            ? prices.ethereum.usd.toLocaleString()
-            : coin === "BNB"
-            ? prices.binancecoin.usd.toLocaleString()
-            : coin === "Solana"
-            ? prices.solana.usd.toLocaleString()
-            : "N/A"
-          : "Loading..."}{" "}
-        USD
-      </p>
+  {prices && prices.bitcoin ? (
+    coin === "Bitcoin"
+      ? `$${prices.bitcoin.usd.toLocaleString()}`
+      : coin === "Ethereum"
+      ? `$${prices.ethereum.usd.toLocaleString()}`
+      : coin === "BNB"
+      ? `$${prices.binancecoin.usd.toLocaleString()}`
+      : coin === "Solana"
+      ? `$${prices.solana.usd.toLocaleString()}`
+      : "N/A"
+  ) : "Loading..."}
+</p>
+
     </div>
   ))}
 </div>
